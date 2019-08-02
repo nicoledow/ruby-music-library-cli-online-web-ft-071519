@@ -12,9 +12,7 @@ class MusicImporter
   end
   
   def import
-    #iterate through files
-    #call .create_from_filename on each filename
-    
+    self.files.each {|file| Song.create_from_filename(file)}
   end
   
   
