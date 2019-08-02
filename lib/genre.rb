@@ -35,5 +35,5 @@ class Genre
     artists = self.songs.collect {|song| song.artist}
     artists.uniq
   end
-  
+
 end
