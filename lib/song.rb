@@ -3,9 +3,15 @@ class Song
   
   @@all = []
   
-  def initialize(name, artist=Artist.new(name))
+  def initialize(name, artist=nil)
     @name = name
-    @artist = artist
+    self.artist=(artist)
+  end
+  
+  def artist=(artist)
+    #how do I get to this artist within the Artist class and perform this method on it?
+    #create an artist find or create method to use before
+    add_song(self)
   end
   
   def self.all
