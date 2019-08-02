@@ -3,15 +3,14 @@ class Song
   
   @@all = []
   
-  def initialize(name, artist=nil)
+  def initialize(name, artist=nil, genre=nil)
     @name = name
-    self.artist=(artist)
+    self.artist=(artist) unless artist == nil
   end
   
   def artist=(artist)
-    #how do I get to this artist within the Artist class and perform this method on it?
-    #create an artist find or create method to use before
-    add_song(self)
+    @artist = artist
+    artist.add_song(self)
   end
   
   def self.all

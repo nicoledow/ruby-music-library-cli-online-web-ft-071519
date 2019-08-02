@@ -31,4 +31,15 @@ class Artist
     self.songs << song unless songs.include?(song)
   end
   
+  # def self.find_or_create_by_name(artist_name)
+  #   existing_artist = self.all.detect {|a| a.name == artist_name}
+  #   if existing_artist
+  #     existing_artist
+  #   else
+  #     new_artist = Artist.new(artist_name)
+  #     new_artist.save
+  #     new_artist
+  #   end
+  # end
+  
 end
