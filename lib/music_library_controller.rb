@@ -10,7 +10,9 @@ class MusicLibraryController
   end
   
   def call
-
+    user_input = "gets.strip.downcase"
+    
+    while user_input != "exit"
     puts "Welcome to your music library!"
     puts "To list all of your songs, enter 'list songs'."
     puts "To list all of the artists in your library, enter 'list artists'."
@@ -22,7 +24,6 @@ class MusicLibraryController
     puts "What would you like to do?"
     end
     
-    user_input = gets.strip.downcase
    
     case user_input
     when "list songs"
